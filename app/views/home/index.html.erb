@@ -1,4 +1,24 @@
 <h3>Home</h3>
+<div class="row-fluid">
+  <div class="col-md-6">
+    <div class="well">
+      <h1>Schedule by Training Day</h1>
+      <p>To view the entire training schedule by date</p>
+      <p>
+        <a class="btn btn-primary btn-large" <%= link_to 'Training Days', training_days_path %></a>
+      </p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="well">
+      <h1>Schedule by Trade</h1>
+      <p>To view the training schedule by trade</p>
+      <p>
+        <a class="btn btn-primary btn-large" <%= link_to 'Trade', training_days_path %></a>
+      </p>
+    </div>
+  </div>
+</div>
 <% if !current_user.nil? and current_user.admin? %>
   <% @users.each do |user| %>
     <p>User: <%=link_to user.email, user %> Role: <%= user.role unless user.role.nil? %></p>
